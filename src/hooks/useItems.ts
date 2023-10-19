@@ -2,13 +2,12 @@ import { useState } from "react"
 
 /**
  * todo: fetch data from API
- * @return {[boolean,Array<Item>]}
  */
-export function useItems() {
+export function useItems(): [ready: boolean, items: Array<Item>] {
   const [ready, setReady] = useState(false)
-  const [items, setItems] = useState([])
+  const [items, setItems] = useState<Item[]>([])
 
-  import("../fixtures/items.js").then((module) => {
+  import("../fixtures/items").then((module) => {
     setItems(module.default)
     setReady(true)
   })

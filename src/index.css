@@ -9,3 +9,7 @@ a {
 h1 {
   @apply text-4xl;
 }
+
+header {
+  @apply h-16 bg-black flex items-center justify-between px-4 text-blue-100 text-2xl;
+}
