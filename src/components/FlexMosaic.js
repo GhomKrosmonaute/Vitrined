@@ -2,7 +2,7 @@
  * @param elements {Array<Element>}
  * @constructor
  */
-export default function Mosaic({ elements }) {
+export default function FlexMosaic({ elements }) {
   const rowSize = 4
 
   /**

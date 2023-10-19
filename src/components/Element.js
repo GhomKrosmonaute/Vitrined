@@ -7,9 +7,18 @@ import { Link } from "react-router-dom"
  */
 export default function Element({ item }) {
   return (
-    <div>
-      <h2>{item.name}</h2>
-      <Link to={`/element/${item.id}`}>Show</Link>
+    <div
+      style={{
+        backgroundImage: `url(${item.image})`,
+      }}
+      className="flex flex-col justify-between p-4 bg-cover bg-center bg-no-repeat h-96"
+    >
+      <span className="text-2xl">{item.name}</span>
+      <div className="flex gap-2">
+        {/*Actions*/}
+        <Link to={`/element/${item.id}`}>Show</Link>
+        <Link to={`/element/${item.id}`}>Buy</Link>
+      </div>
     </div>
   )
 }

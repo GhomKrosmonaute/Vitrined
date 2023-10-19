@@ -18,8 +18,14 @@ export default function ElementPage() {
       }
 
   return (
-    <div>
-      <h1>{item.name}</h1>
+    <div className="flex">
+      <div className="flex-1 p-2">
+        <h1>{item.name}</h1>
+        <p>{item.description}</p>
+      </div>
+      <div>
+        <img src={item.image} alt="" />
+      </div>
     </div>
   )
 }
