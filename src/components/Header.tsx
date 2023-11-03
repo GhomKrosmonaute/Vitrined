@@ -1,5 +1,5 @@
 import React from "react"
-
+import * as website from "../website"
 import { Link } from "react-router-dom"
 
 export default function Header() {
@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header>
       <div className="fixed w-full text-4xl text-center text-green-300 left-0 pointer-events-none uppercase">
-        Website
+        {website.name}
       </div>
 
       <nav className="pl-2">
@@ -43,7 +43,7 @@ export default function Header() {
               : "hidden"
           }
         >
-          <ul className=" flex-col">
+          <ul className="flex-col">
             <li>
               <Link to="/">Home</Link>
             </li>
