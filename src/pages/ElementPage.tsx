@@ -21,7 +21,7 @@ export default function ElementPage() {
       name: "Loading...",
       description: "Loading...",
       image: "/placeholders/img_0.png",
-      price: 3,
+      price: "3",
     }
   }
 

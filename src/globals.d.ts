@@ -2,6 +2,6 @@ declare interface Item {
   id: number
   name: string
   image: string
-  price: number
+  price: string
   description: string
 }
