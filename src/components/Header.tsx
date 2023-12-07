@@ -2,16 +2,16 @@ import React from "react"
 import * as website from "../website"
 import { Link } from "react-router-dom"
 
-export default function Header() {
+export default function Header({ className }: { className?: string }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   return (
-    <header>
-      <div className="fixed w-full text-4xl text-center text-green-300 left-0 pointer-events-none uppercase">
-        {website.name}
+    <header className={className}>
+      <div className="absolute text-4xl text-green-300 left-1/2 -translate-x-1/2 uppercase">
+        <Link to="/">{website.name}</Link>
       </div>
 
-      <nav className="pl-2">
+      <nav className="pl-2 container mx-auto">
         <ul className="gap-3 hidden md:flex">
           <li>
             <Link to="/">Home</Link>

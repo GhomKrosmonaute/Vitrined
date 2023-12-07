@@ -1,9 +1,11 @@
 import React from "react"
 
-export default function Footer() {
+export default function Footer({ className }: { className?: string }) {
   return (
-    <footer className="w-full flex justify-center items-center h-16">
-      <span className="text-2xl">Footer</span>
+    <footer className={className}>
+      <div className="container mx-auto flex justify-center items-center h-[64px]">
+        <span className="text-2xl">Footer</span>
+      </div>
     </footer>
   )
 }

@@ -13,17 +13,19 @@ import Error404 from "./pages/Error404"
 export default function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <Main>
-          <Routes>
-            <Route path="/elements" element={<Elements />} />
-            <Route path="/element/:id" element={<ElementPage />} />
-            <Route path="/" element={<Home />} />
-            <Route path="*" element={<Error404 />} />
-          </Routes>
-        </Main>
-        <Footer />
+      <div>
+        <Header className="h-[64px]" />
+        <div className="h-[calc(100svh-64px)] overflow-y-scroll flex flex-col">
+          <Main>
+            <Routes>
+              <Route path="/elements" element={<Elements />} />
+              <Route path="/element/:id" element={<ElementPage />} />
+              <Route path="/" element={<Home />} />
+              <Route path="*" element={<Error404 />} />
+            </Routes>
+          </Main>
+          <Footer className="h-[64px]" />
+        </div>
       </div>
     </Router>
   )

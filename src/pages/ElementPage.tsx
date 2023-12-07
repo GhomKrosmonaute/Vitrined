@@ -26,7 +26,7 @@ export default function ElementPage() {
   }
 
   return (
-    <div className="flex">
+    <div className="flex container mx-auto">
       <div className="flex-1 p-2">
         <h1>{item.name}</h1>
         <p>{item.description}</p>
